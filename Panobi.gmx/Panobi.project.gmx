@@ -10,8 +10,10 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprites name="Spr_Player">
       <sprite>sprites\spr_test_player</sprite>
+      <sprite>sprites\spr_player_2</sprite>
     </sprites>
     <sprite>sprites\spr_ammo</sprite>
+    <sprite>sprites\spr_sword</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\moon</background>
@@ -19,9 +21,14 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_platform</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_ammo</object>
+    <object>objects\obj_controller</object>
+    <objects name="players">
+      <object>objects\obj_player_1</object>
+      <object>objects\obj_player_2</object>
+    </objects>
+    <object>objects\obj_sword</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

@@ -177,12 +177,14 @@ if (lkey) {
 
 if (obj_player_2.ammo &gt; 0){
     if (skey &amp;&amp; dir == 1) {
-        instance_create(x+16, y, obj_bullet);
-        obj_player_2.ammo -= 1    
+        instance_create(x+16, y, obj_bullet_player_2);
+        obj_player_2.ammo -= 1
+        dir = 1    
     }
     if (skey &amp;&amp; dir == -1) {
-        instance_create(x-16, y, obj_bullet);
-        obj_player_2.ammo -= 1     
+        instance_create(x-16, y, obj_bullet_player_2);
+        obj_player_2.ammo -= 1
+        dir = -1     
     }
 }
 
@@ -217,7 +219,7 @@ if (obj_player_2.ammo &gt; 0){
             <kind>1</kind>
             <string>/// Death Conditions
 
-if (life == 0){
+if (life == 0 || life &lt; 0){
     instance_destroy();
 }
 </string>

@@ -173,12 +173,14 @@ if (lkey) {
 
 if (obj_player_1.ammo &gt; 0){
     if (skey &amp;&amp; dir == 1) {
-        instance_create(x+16, y, obj_bullet);
-        obj_player_1.ammo -= 1    
+        instance_create(x+16, y, obj_bullet_player_1);
+        obj_player_1.ammo -= 1  
+        dir = 1  
     }
     if (skey &amp;&amp; dir == -1) {
-        instance_create(x-16, y, obj_bullet);
-        obj_player_1.ammo -= 1     
+        instance_create(x-16, y, obj_bullet_player_1);
+        obj_player_1.ammo -= 1
+        dir = -1     
     }
 }
 
@@ -212,7 +214,7 @@ if (obj_player_1.ammo &gt; 0){
           <argument>
             <kind>1</kind>
             <string>/// Sword Mechanics [IN THE WORKS]
-/*
+
 var sword_key = keyboard_check_pressed(vk_shift) ||
                 gamepad_button_check_pressed(0, gp_face4);
                 
@@ -223,17 +225,14 @@ if (lkey) {
     dir = -1
 }
 
-if (ammo &gt; 0){
-    if (sword_key &amp;&amp; dir == 1) {
-        instance_create(x+16, y, obj_sword);
-        instance_destroy(obj_sword);   
-    }
-    if (sword_key &amp;&amp; dir == -1) {
-        instance_create(x-16, y, obj_sword);
-        instance_destroy(obj_sword);
-    }
+
+if (sword_key &amp;&amp; dir == 1) {
+    instance_create(x+32, y, obj_sword);
 }
-*/
+
+if (sword_key &amp;&amp; dir == -1) {
+    instance_create(x-32, y, obj_sword);
+}
 </string>
           </argument>
         </arguments>

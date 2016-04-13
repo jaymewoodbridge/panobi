@@ -4,39 +4,60 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_jump</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_platform</sprite>
-    <sprite>sprites\spr_bullet</sprite>
-    <sprites name="Spr_Player">
+    <sprites name="Test Sprites">
+      <sprite>sprites\spr_sword</sprite>
+      <sprite>sprites\spr_test_player</sprite>
+      <sprite>sprites\spr_ammo</sprite>
+      <sprite>sprites\spr_platform</sprite>
       <sprite>sprites\spr_player_2</sprite>
-      <sprites name="Player_1">
-        <sprite>sprites\spr_test_player</sprite>
-        <sprite>sprites\spr_panobi_idle</sprite>
-      </sprites>
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_button</sprite>
     </sprites>
-    <sprite>sprites\spr_ammo</sprite>
-    <sprite>sprites\spr_sword</sprite>
+    <sprite>sprites\spr_panobi_idle_left</sprite>
+    <sprite>sprites\spr_panobi_idle_right</sprite>
+    <sprite>sprites\spr_panobi_running_left</sprite>
+    <sprite>sprites\spr_sword_attack_left</sprite>
+    <sprite>sprites\spr_sword_attack_right</sprite>
+    <sprite>sprites\spr_panobi_running_right</sprite>
+    <sprite>sprites\spr_ammo_temp</sprite>
+    <sprite>sprites\spr_cursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\moon</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_end_game.gml</script>
+    <script>scripts\scr_start_game.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_platform</object>
     <object>objects\obj_ammo</object>
-    <object>objects\obj_controller</object>
     <objects name="players">
       <object>objects\obj_player_1</object>
       <object>objects\obj_player_2</object>
     </objects>
     <objects name="attack objects">
       <object>objects\obj_bullet_player_1</object>
-      <object>objects\obj_sword</object>
       <object>objects\obj_bullet_player_2</object>
+    </objects>
+    <objects name="controllers">
+      <object>objects\obj_start_menu_controller</object>
+      <object>objects\obj_player_counter</object>
+      <object>objects\obj_ammo_respawn</object>
+    </objects>
+    <objects name="Buttons">
+      <object>objects\obj_button_parent</object>
+      <object>objects\obj_start_button</object>
+      <object>objects\obj_end_button</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start_menu</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
